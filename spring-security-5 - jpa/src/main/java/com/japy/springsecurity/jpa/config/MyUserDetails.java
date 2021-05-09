@@ -7,34 +7,40 @@ import java.util.Collection;
 
 public class MyUserDetails implements UserDetails {
 
+    private String userName;
+
+    public MyUserDetails(String userName){
+        this.userName = userName;
+    }
+
     @Override
     public String getUsername() {
-        return null;
+        return userName;
     }
 
     @Override
     public String getPassword() {
-        return null;
+        return "pass";
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
