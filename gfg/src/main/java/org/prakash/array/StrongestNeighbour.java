@@ -1,6 +1,8 @@
 package org.prakash.array;
 
 /**
+ * Strongest Neighbour
+ * ------------------------
  * Given an array arr[] of n positive integers. The task is to
  * find the maximum for every adjacent pairs in the array.
  *
@@ -39,13 +41,12 @@ public class StrongestNeighbour {
         int[] arr = {89, 89, 60};
 
         maximumAdjacent(n, arr);
-
     }
 
     /**
      * Function to find maximum for every adjacent pairs in the array.
      * <p>
-     * Function should print max adjacents for all pairs
+     * Function should print max adjacent for all pairs
      * Use string buffer for fast output
      *
      * @param sizeOfArray
@@ -62,11 +63,10 @@ public class StrongestNeighbour {
         }
 
         System.out.println(buffer);
-
     }
 
     // Function to find maximum for every adjacent pairs in the array.
-    static void maximumAdjacent(int sizeOfArray, int arr[]) {
+    static void maximumAdjacentCompact(int sizeOfArray, int arr[]) {
         StringBuffer buffer = new StringBuffer();
         for (int i = 0; i < sizeOfArray - 1; i = i + 1) {
             buffer.append(Math.max(arr[i], arr[i + 1])).append(" ");
